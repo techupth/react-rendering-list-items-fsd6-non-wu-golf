@@ -1,6 +1,5 @@
 import "./App.css";
-import movies from "./data/movies";
-import Movie from "./components/Movie";
+import MovieList from "./components/MovieList";
 
 function App() {
   return (
@@ -8,7 +7,7 @@ function App() {
       <h1 className="text-[40px] text-center my-[70px]">Movie List Section</h1>
       <section className="movie-list-section">
         {/* Render Movie Lists Here */}
-        <Movie />
+        <MovieList />
       </section>
     </div>
   );

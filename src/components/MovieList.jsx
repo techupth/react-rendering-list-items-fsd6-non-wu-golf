@@ -1,12 +1,16 @@
 import React from "react";
 import movies from "../data/movies";
 
-const Movie = () => {
+const MovieList = () => {
   return (
     <div className="flex flex-col gap-[80px]">
-      {movies.map((item) => {
+      {movies.map((item, index) => {
+        console.log(index);
         return (
-          <div className="w-[550px] h-[250px] bg-white rounded-[10px] flex gap-[15px] py-[18px] px-[15px] mx-auto">
+          <div
+            className="w-[550px] h-[250px] bg-white rounded-[10px] flex gap-[15px] py-[18px] px-[15px] mx-auto"
+            key={index}
+          >
             <img
               src={item.image}
               className="rounded-[10px] object-fill h-[100px] w-[100px]"
@@ -33,4 +37,4 @@ const Movie = () => {
   );
 };
 
-export default Movie;
+export default MovieList;
